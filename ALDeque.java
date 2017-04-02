@@ -13,40 +13,40 @@ public class ALDeque<T> implements Deque<T>{
     }
 
     //Add an item at the front end of the deque
-    public void addFirst(T x){
-	_deque.add(x);
-	_size++;
+    public void addFirst( T item ){
+	_deque.add( item );
+	_size += 1;
     }
 
     //Add an item at the back end of the deque
-    public void addLast(T x){
-	_deque.add(_size,x);
-	_size++;
+    public void addLast( T item ){
+	_deque.add( _size, item );
+	_size += 1;
     }
 
     //Remove the item at the front end of the deque
     public T removeFirst(){
-	T x = _deque.remove(0);
-	_size--;
-	return x;
+	T item = _deque.remove(0);
+	_size -= 1;
+	return item;
     }
 
     //Remove the item at the back end of the deque
     public T removeLast(){
-	T x = _deque.remove(_size-1);
-	_size--;
-	return x;
+	T item = _deque.remove( _size - 1 );
+	_size -= 1;
+	return item;
     }
 
     //Return the item at the front end of the deque
-    public T peekFirst(){
+    public T peekFirst() {
         return _deque.get(0);
 
     }
 
     //Return the item at the back end of the deque
     public T peekLast(){
-	return _deque.get(_size-1);
+	return _deque.get( _size - 1 );
     }
 
     //Check to see if the deque is empty
@@ -62,45 +62,47 @@ public class ALDeque<T> implements Deque<T>{
     //Prints out the items in the deque, from front end to back end
     public String toString(){
 	String s = "";
-	for (int x = 0; x < _size; x++){
-	    s += _deque.get(x);
+	for ( int i = 0; i < _size; i++ ) {
+	    s += _deque.get(i);
 	    s += " ";
 	}
 	return s;
     }
 
-    //For testing purposes
-    public static void main(String[] args){
-	Deque<String> bigThings = new ALDeque<String>();
+    //tests
+    public static void main( String[] args ){
+	Deque<String> q = new ALDeque<String>();
 
 	System.out.println("\nnow enqueuing from front end...");
-	bigThings.addFirst("pool");
-	bigThings.addFirst("school");
-	bigThings.addFirst("tool");
+	q.addFirst("happy");
+	q.addFirst("dappy");
+	q.addFirst("zappy");
+	System.out.println(q);//show how it looks at this point
 
 	System.out.println("\nnow enqueuing from back end...");
-	bigThings.addLast("building");
-	bigThings.addLast("car");
-	bigThings.addLast("plane");
+	q.addLast("super");
+	q.addLast("duper");
+	q.addLast("muper");
+	System.out.println(q);//show how it looks at this point
 
 	System.out.println("\nnow testing toString()...");
-	System.out.println( bigThings );
+	System.out.println( q );
 
 	System.out.println("\nnow testing peek methods...");
-	System.out.println( bigThings.peekFirst() );
-	System.out.println( bigThings.peekLast() );
+	System.out.println( q.peekFirst() );
+	System.out.println( q.peekLast() );
 	
 	System.out.println("\nnow dequeuing from front end...");
-	System.out.println( bigThings.removeFirst() );
-	System.out.println( bigThings.removeFirst() );
-	System.out.println( bigThings.removeFirst() );
+	System.out.println( q.removeFirst() );
+	System.out.println( q.removeFirst() );
+	System.out.println( q.removeFirst() );
 
 	System.out.println("\nnow dequeuing from back end...");
-	System.out.println( bigThings.removeLast() );
-	System.out.println( bigThings.removeLast() );
-	System.out.println( bigThings.removeLast() );
+	System.out.println( q.removeLast() );
+	System.out.println( q.removeLast() );
+	System.out.println( q.removeLast() );
 
 	//	System.out.println("\nnow dequeuing fr empty deque...");
-	//	System.out.println( bigThings.removeFirst() );
+	//	System.out.println( q.removeFirst() );
     }
 }
