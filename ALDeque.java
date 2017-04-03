@@ -34,13 +34,13 @@ public class ALDeque<T> implements Deque<T>{
     }
 
     //Return the item at the front end of the deque
-    public T peekFirst() {
+    public T getFirst() {
         return _deque.get(0);
 
     }
 
     //Return the item at the back end of the deque
-    public T peekLast(){
+    public T getLast(){
 	return _deque.get( size() - 1 );
     }
 
@@ -83,9 +83,9 @@ public class ALDeque<T> implements Deque<T>{
 	System.out.println("\nnow testing toString()...");
 	System.out.println( q );
 
-	System.out.println("\nnow testing peek methods...");
-	System.out.println( q.peekFirst() );
-	System.out.println( q.peekLast() );
+	System.out.println("\nnow testing get methods...");
+	System.out.println( q.getFirst() );
+	System.out.println( q.getLast() );
 	
 	System.out.println("\nnow dequeuing from front end...");
 	System.out.println( q.removeFirst() );

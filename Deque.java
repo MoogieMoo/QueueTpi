@@ -11,8 +11,8 @@ public interface Deque<Quasar> {
     public void addLast(Quasar e);
     public Quasar removeFirst();	
     public Quasar removeLast();
-    public Quasar peekFirst();	
-    public Quasar peekLast();
+    public Quasar getFirst();	
+    public Quasar getLast();
 
 
 }//end interface Deque                                                                                           

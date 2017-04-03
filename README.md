@@ -2,12 +2,12 @@
 ## Datian Zhang, Maggie Xia, Adris Jaoutakas
 
 We chose these methods:
-+ add()
++ add
 ##### addFirst() and addLast() add items to the deque
-+ remove()
++ remove
 ##### removeFirst() and removeLast() remove items to the deque
-+ peek()
-##### peekFirst() and peekLast() peek at items in the deque
++ get
+##### getFirst() and getLast() return the items in the deque
 + isEmpty()
 ##### checks if the deque is empty
 + size()
@@ -17,3 +17,10 @@ We chose these methods:
 
 ### We chose to use an Arraylist for Deque because it was easier to implement than DLL and it was more flexible than Array, where size is unchangeable.
 
+We left out these methods"
++ offer
+##### same functionality as add except does not throw exception
++ poll
+##### same functionality as remove except does not throw exception
++ peek
+##### same functionality as get except does not throw exception
