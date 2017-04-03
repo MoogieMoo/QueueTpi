@@ -7,17 +7,15 @@
 
 public interface Deque<Quasar> {
 
-    public void addFirst(e);
-    public void offerFirst(e);
-    public void addLast(e);
-    public boolean offerLast(e);
+    public void addFirst(Quasar e);
+    //public void offerFirst(Quasar e);
+    public void addLast(Quasar e);
+    //public boolean offerLast(Quasar e);
     public Quasar removeFirst();	
-    public Quasar pollFirst();
+    //public Quasar pollFirst();
     public Quasar removeLast();
-    public Quasar pollLast();	
-    public Quasar getFirst();
+    //public Quasar pollLast();	
     public Quasar peekFirst();	
-    public Quasar getLast();	
     public Quasar peekLast();
 
 

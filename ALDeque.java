@@ -3,38 +3,33 @@ import java.util.ArrayList;
 public class ALDeque<T> implements Deque<T>{
 
     //Instance vars
-    private int _size;
     private ArrayList<T> _deque;
 
     //Default constructor
     public ALDeque(){
 	_deque = new ArrayList<T>();
-	_size = 0;
     }
 
     //Add an item at the front end of the deque
     public void addFirst( T item ){
-	_deque.add( item );
-	_size += 1;
+	_deque.add( 0, item );
     }
 
     //Add an item at the back end of the deque
     public void addLast( T item ){
-	_deque.add( _size, item );
-	_size += 1;
+	_deque.add( item );
     }
+
 
     //Remove the item at the front end of the deque
     public T removeFirst(){
 	T item = _deque.remove(0);
-	_size -= 1;
 	return item;
     }
 
     //Remove the item at the back end of the deque
     public T removeLast(){
-	T item = _deque.remove( _size - 1 );
-	_size -= 1;
+	T item = _deque.remove( size() - 1 );
 	return item;
     }
 
@@ -46,7 +41,7 @@ public class ALDeque<T> implements Deque<T>{
 
     //Return the item at the back end of the deque
     public T peekLast(){
-	return _deque.get( _size - 1 );
+	return _deque.get( size() - 1 );
     }
 
     //Check to see if the deque is empty
@@ -56,13 +51,13 @@ public class ALDeque<T> implements Deque<T>{
 
     //Accessor for the size of the deque
     public int size(){
-	return _size;
+	return _deque.size();
     }
 
     //Prints out the items in the deque, from front end to back end
     public String toString(){
 	String s = "";
-	for ( int i = 0; i < _size; i++ ) {
+	for ( int i = 0; i < size(); i++ ) {
 	    s += _deque.get(i);
 	    s += " ";
 	}
