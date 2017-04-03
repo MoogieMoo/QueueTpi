@@ -1,1 +1,2 @@
 # QueueTpi
+We chose the methods add/remove/peek, isEmpty, size because that we thought they were the basic function of a data structure and was consistent with the methods that we had implemented before in Stack and Queue.We chose to use an Arraylist for Deque because it was easier to implement than DLL and it was more flexible than Array, where you couldn't change the size.
