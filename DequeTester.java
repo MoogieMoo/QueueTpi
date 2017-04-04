@@ -4,7 +4,7 @@
 // 2017-04-04
 
 //Driver class
-public class Driver {
+public class DequeTester {
     
     public static void main ( String[] args ) {
 
@@ -49,4 +49,4 @@ public class Driver {
 
     }//end main method
 
-}//end class Driver
+}//end class DequeTester
