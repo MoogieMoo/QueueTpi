@@ -65,39 +65,41 @@ public class ALDeque<T> implements Deque<T>{
     }
 
     //tests
-    public static void main( String[] args ){
-	Deque<String> q = new ALDeque<String>();
+    
+      public static void main( String[] args ){
+      Deque<String> q = new ALDeque<String>();
 
-	System.out.println("\nnow enqueuing from front end...");
-	q.addFirst("happy");
-	q.addFirst("dappy");
-	q.addFirst("zappy");
-	System.out.println(q);//show how it looks at this point
+      System.out.println("\nnow enqueuing from front end...");
+      q.addFirst("happy");
+      q.addFirst("dappy");
+      q.addFirst("zappy");
+      System.out.println(q);//show how it looks at this point
 
-	System.out.println("\nnow enqueuing from back end...");
-	q.addLast("super");
-	q.addLast("duper");
-	q.addLast("muper");
-	System.out.println(q);//show how it looks at this point
+      System.out.println("\nnow enqueuing from back end...");
+      q.addLast("super");
+      q.addLast("duper");
+      q.addLast("muper");
+      System.out.println(q);//show how it looks at this point
 
-	System.out.println("\nnow testing toString()...");
-	System.out.println( q );
+      System.out.println("\nnow testing toString()...");
+      System.out.println( q );
 
-	System.out.println("\nnow testing get methods...");
-	System.out.println( q.getFirst() );
-	System.out.println( q.getLast() );
+      System.out.println("\nnow testing get methods...");
+      System.out.println( q.getFirst() );
+      System.out.println( q.getLast() );
 	
-	System.out.println("\nnow dequeuing from front end...");
-	System.out.println( q.removeFirst() );
-	System.out.println( q.removeFirst() );
-	System.out.println( q.removeFirst() );
+      System.out.println("\nnow dequeuing from front end...");
+      System.out.println( q.removeFirst() );
+      System.out.println( q.removeFirst() );
+      System.out.println( q.removeFirst() );
 
-	System.out.println("\nnow dequeuing from back end...");
-	System.out.println( q.removeLast() );
-	System.out.println( q.removeLast() );
-	System.out.println( q.removeLast() );
+      System.out.println("\nnow dequeuing from back end...");
+      System.out.println( q.removeLast() );
+      System.out.println( q.removeLast() );
+      System.out.println( q.removeLast() );
 
-	//	System.out.println("\nnow dequeuing fr empty deque...");
-	//	System.out.println( q.removeFirst() );
+      //	System.out.println("\nnow dequeuing fr empty deque...");
+      //	System.out.println( q.removeFirst() );
+      
     }
 }
