@@ -1,52 +1,129 @@
-// Maggie Xia
-// APCS2 pd1
-// HW29--Stress is the Best
-// 2017-04-04
+//Team Chipettes
 
-//Driver class
-public class DequeTester {
-    
-    public static void main ( String[] args ) {
+public class DequeDriver {
 
-	//Instantiate new Deque
-	Deque<String> test1 = new ALDeque<String>();
+    public static void main(String[] args){
 	
-	System.out.println("\nTesting enqueue() from front end...");
-	q.addFirst("uno");
-	q.addFirst("dos");
-	q.addFirst("tres");
-	//should print: tres dos uno
-	System.out.println(q);
+	DDeque<String> james = new DDeque<String>();
 
-	//should print: yi er san
-	System.out.println("\nTesting enqueue() from back end...");
-	q.addLast("yi");
-	q.addLast("er");
-	q.addLast("san");
-	System.out.println(q);//show how it looks at this point
+	// testing addFirst
+ 
+ 	// adds love to the front of the deque
+ 	foo.addFirst("love");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// adds I to the front of the deque
+ 	foo.addFirst("I");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// adds hello to the front of the deque
+ 	foo.addFirst("hello");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+
+ 	
+ 	// testing addLast
+ 
+ 	// adds green tea to the end of the deque
+	foo.addLast("green tea");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// adds ice cream to the end of the deque
+	foo.addLast("ice cream");
+	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	
+ 	// testing removeFirst
+ 
+ 	// removes the first element of the deque, hello
+	foo.removeFirst();
+	System.out.println(foo + "\tsize: " + foo.size());
+
+	// removes the first element of the deque, I
+ 	foo.removeFirst();
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// removes the first element of the deque, love
+ 	foo.removeFirst();
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	
+ 	// testing removeLast
+ 
+ 	// removes the last element of the deque, ice cream
+ 	foo.removeLast();
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// removes the last element of the deque, green tea
+ 	foo.removeLast();
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+
      
-	System.out.println("\nTesting get() methods...");
-	System.out.println( "First: " );
-	System.out.println( q.getFirst() );//tres
-	System.out.println( "Last: " );
-	System.out.println( q.getLast() );//san
+ 	// removes the last element of the deque, null, so throws a NullPointerException
+ 	foo.removeLast();
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
 	
-	System.out.println("\nnow dequeuing from front end...");
-	System.out.println( "First: " );
-	System.out.println( q.removeFirst() );//tres
-	System.out.println( "Second: " );
-	System.out.println( q.removeFirst() );//dos
-	System.out.println( "Third: " );
-	System.out.println( q.removeFirst() );//uno
+	// testing contains
 
-	System.out.println("\nnow dequeuing from back end...");
-	System.out.println( "First: " );
-	System.out.println( q.removeLast() );//san
-	System.out.println( "Second: " );
-	System.out.println( q.removeLast() );//er
-	System.out.println( "Third: " );
-	System.out.println( q.removeLast() );//yi
+ 	// adds corresponding String to the end of the deque, for testing purposes
+ 	foo.addLast("hello");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 	foo.addLast("hello");
+	System.out.println(foo + "\tsize: " + foo.size());
+	foo.addLast("how are you doing");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 	foo.addLast("how are you doing");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 	foo.addLast("hello");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 	foo.addLast("green tea");
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// checks if the String green tea is contained in the deque, returns true
+ 	System.out.println("contains: green tea?");
+ 	System.out.println(foo.contains("green tea"));
+ 
+ 	// checks if the String bye is contained in the deque, returns false
+	System.out.println("contains: bye?");
+	System.out.println(foo.contains("bye"));
 
-    }//end main method
+	
+ 	// testing removeFirstOccurrence
+ 
+ 	// removes the first occurrence of how are you doing of the deque, returns true
+ 	System.out.println("remove first occurrence of 'how are you doing'");
+ 	System.out.println(foo.removeFirstOccurrence("how are you doing"));
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// removes the first occurrence of hello of the deque, returns true
+ 	System.out.println("remove first occurrence of 'hello'");
+ 	System.out.println(foo.removeFirstOccurrence("hello"));
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// removes the first occurrence of love of the deque, returns false
+	System.out.println("remove first occurrence of 'love'");
+ 	System.out.println(foo.removeFirstOccurrence("love"));
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	
+ 	// testing removeLastOccurrence
+ 
+ 	// removes the last occurrence of how are you doing of the deque, returns true
+ 	System.out.println("remove last occurrence of 'how are you doing'");
+ 	System.out.println(foo.removeFirstOccurrence("how are you doing"));
+ 	System.out.println(foo + "\tsize: " + foo.size());
+ 
+ 	// removes the last occurrence of hello of the deque, returns true
+ 	System.out.println("remove last occurrence of 'hello'");
+ 	System.out.println(foo.removeFirstOccurrence("hello"));
+ 	System.out.println(foo + "\tsize: " + foo.size());	
+ 
+ 	// removes the last occurrence of green tea of the deque, returns true
+ 	System.out.println("remove last occurrence of 'green tea'");
+ 	System.out.println(foo.removeFirstOccurrence("green tea"));
+ 	System.out.println(foo + "\tsize: " + foo.size());
 
-}//end class DequeTester
+ 
+    }
+}
